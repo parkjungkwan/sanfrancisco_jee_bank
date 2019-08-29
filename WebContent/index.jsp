@@ -9,22 +9,18 @@
 </head>
 <body>
 <div>
-	<h2>회원가입</h2>
+	<h2>통장 만들기</h2>
 	
 	
-	<form id="join_form" action="<%=request.getContextPath()%>/member.do">
-		아이디 <input type="text" name="id" /> <br/>
-		비밀번호 <input type="text" name="pw" /> <br/>
-		주민번호 <input type="text" name="ssn" /> <br/>
-		이름 <input type="text" name="name" /> <br/>
-		신용도 <input type="text" name="credit" /> <br/>
+	<form id="account_form" action="<%=request.getContextPath()%>/account.do">
+		입금액 <input type="text" name="id" /> <br/>
 		<input type="submit" id="btn" value="전송">
 	</form>
 </div>
 <script>
 
-$('#join_form').submit(function(){
-	alert('테스트 맥락 6');
+$('#account_form').submit(function(){
+	alert('통장 테스트');
 	
 });
 </script>
