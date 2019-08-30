@@ -13,7 +13,7 @@
 	
 	
 	<form id="account_form" action="<%=request.getContextPath()%>/account.do">
-		입금액 <input type="text" name="id" /> <br/>
+		입금액 <input type="text" name="money" /> <br/>
 		<input type="submit" id="btn" value="전송">
 	</form>
 </div>

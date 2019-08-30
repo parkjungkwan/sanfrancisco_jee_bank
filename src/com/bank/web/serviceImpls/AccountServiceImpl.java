@@ -2,13 +2,24 @@ package com.bank.web.serviceImpls;
 
 import com.bank.web.domains.AccountBean;
 import com.bank.web.services.AccountService;
+import java.util.List;
+import java.util.ArrayList;
 
 public class AccountServiceImpl implements AccountService{
-
+	private List<AccountBean> accounts;
+	
+	public AccountServiceImpl() {
+		accounts = new ArrayList<>();
+	}
+	
 	@Override
-	public void createAccount(int money) {
-		// TODO Auto-generated method stub
-		
+	public void createAccount(String money) {
+		AccountBean a = new AccountBean();
+		a.setAccountNum(createAccountNum());
+		a.setMoney(money);
+		a.setRegDate(findDate());
+		System.out.println(a.toString());
+		accounts.add(a);
 	}
 
 	@Override
@@ -18,9 +29,9 @@ public class AccountServiceImpl implements AccountService{
 	}
 
 	@Override
-	public AccountBean[] findAll() {
+	public List<AccountBean> findAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return accounts;
 	}
 
 	@Override
@@ -32,7 +43,7 @@ public class AccountServiceImpl implements AccountService{
 	@Override
 	public int countAccounts() {
 		// TODO Auto-generated method stub
-		return 0;
+		return accounts.size();
 	}
 
 	@Override

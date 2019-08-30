@@ -1,9 +1,10 @@
 package com.bank.web.services;
 import com.bank.web.domains.*;
+import java.util.List;
 public interface AccountService {
-	public void createAccount(int money);
+	public void createAccount(String money);
 	public String createAccountNum();
-	public AccountBean[] findAll();
+	public List<AccountBean> findAll();
 	public AccountBean findByAccountNum(String accountNum);
 	public int countAccounts();
 	public boolean existAccountNum(String accountNum);
