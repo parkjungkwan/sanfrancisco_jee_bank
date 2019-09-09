@@ -9,7 +9,8 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class FileTest {
-	public static final String FILE_PATH = String.format("C:%sUsers%suser%seclipse-jee%sjee-bitcamp%sWebContent%sresources%stxt%s",
+	public static final String FILE_PATH = 
+			String.format("C:%sUsers%suser%seclipse-jee%sjee-bitcamp%sWebContent%sresources%stxt%s",
 											File.separator,
 											File.separator,
 											File.separator,
@@ -23,7 +24,7 @@ public class FileTest {
 		System.out.println(">>> "+FILE_PATH);
 		
 		try {
-			File file = new File(FILE_PATH+"list.txt");
+			File file = new File(FILE_PATH+"test190905.txt");
 			BufferedWriter writer = new BufferedWriter(new FileWriter(file,true));
 			BufferedReader reader = new BufferedReader(new FileReader(file));
 			List<String> list = new ArrayList<>();

@@ -17,11 +17,11 @@ public class MemberServiceImpl implements MemberService{
 	public MemberServiceImpl() {
 		customers = new ArrayList<>();
 		employees = new ArrayList<>();
-	} 
+	}                                
 
 	@Override
 	public void join(CustomerBean param) {
-		customers.add(param);
+		
 	}
 
 	@Override
@@ -94,23 +94,8 @@ public class MemberServiceImpl implements MemberService{
 	}
 
 	@Override
-	public boolean login(MemberBean param) {
-		boolean flag = false;
-		MemberBean m = findById(param.getId());
-		
-		for(CustomerBean c : customers) {
-			if(m.equals(c.getId())) {
-				flag = true;
-				break;
-			}
-		}
-		for(EmployeeBean e : employees) {
-			if(m.equals(e.getId())) {
-				flag = true;
-				break;
-			}
-		}
-		return flag;
+	public CustomerBean login(MemberBean param) {
+		return null;
 	}
 
 	@Override
