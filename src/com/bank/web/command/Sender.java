@@ -14,4 +14,13 @@ public class Sender {
 			e.printStackTrace();
 		} 
 	}
+	public static void redirect(HttpServletRequest request, 
+			HttpServletResponse response, String url){
+		System.out.println("캐리어내부 : "+Receiver.cmd.getView());
+		try {
+			response.sendRedirect(request.getContextPath()+url);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+	}
 }

@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>마이페이지</title>
 </head>
 <body>
-마이페이지
-<h2>환영합니다 ${customer.name}님</h2>
+<h2>이름 ${customer.name}</h2>
 	<h3>	아이디  ${customer.id} </h3><br/>
 	<h3>	비밀번호 ${customer.pw} </h3><br/>
 	<h3>	주민번호 ${customer.ssn} </h3><br/>
